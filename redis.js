@@ -26,7 +26,7 @@ http.createServer(function( request, response ){
 	response.writeHead(200, {
 		'Content-Type': 'text/plain'
 	});
-	client.get("cow", function(error, reply){
+	client.hgetall("users:1000", function(error, reply){
 		var myresponse = {};
 		myresponse.reply = reply;
 		myresponse.name = 'Barry White';
